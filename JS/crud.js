@@ -16,11 +16,7 @@ addBtn.onclick = function () {
   });
 };
 
-function loadData() {
-  fetch(`${url}.json`)
-    .then((res) => res.json())
-    .then((data) => {
-      list.innerHTML = "";
+function loadData() 
       for (let key in data) {
         list.innerHTML += `<li>${data[key].n}</li>`;
       }
